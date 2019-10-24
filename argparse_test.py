@@ -8,5 +8,8 @@ parser = argparse.ArgumentParser(
         add_help=True, # -h/–help オプションの追加
     )
 
+# 引数の追加実装
+parser.add_argument('-v', '--verbose', help='select mode')
+
 # 引数を解析する
 args = parser.parse_args()
