@@ -10,11 +10,17 @@ parser = argparse.ArgumentParser(
 
 # 引数の追加実装
 parser.add_argument('-v', '--verbose', help='select mode', action='store_true')
-
+parser.add_argument('i', help='integer', type=int)
 # 引数を解析する
 args = parser.parse_args()
 
 if args.verbose:
-    print('Hello')
+    if args.i & 2 == 1:
+        print(str(args.i) + ' : Odd')
+    else:
+        print(str(args.i) + ' : Even')
 else:
-    print('こんにちは')
+    if args.i % 2 == 1:
+        print(str(args.i) + ' : 奇数')
+    else:
+        print(str(args.i) + ' : 偶数')
