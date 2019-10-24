@@ -9,18 +9,12 @@ parser = argparse.ArgumentParser(
     )
 
 # 引数の追加実装
-parser.add_argument('-v', '--verbose', help='select mode', type=int, choices=[0,1])
-parser.add_argument('i', help='integer', type=int)
+parser.add_argument('mul', help='multiply', type=float, nargs=2)
+
 # 引数を解析する
 args = parser.parse_args()
 
-if args.verbose:
-    if args.i & 2 == 1:
-        print(str(args.i) + ' : Odd')
-    else:
-        print(str(args.i) + ' : Even')
-else:
-    if args.i % 2 == 1:
-        print(str(args.i) + ' : 奇数')
-    else:
-        print(str(args.i) + ' : 偶数')
+n1 = args.mul[0]
+n2 = args.mul[1]
+calc = n1 * n2
+print(str(n1) + ' x ' + str(n2) + ' = ' + str(calc))
