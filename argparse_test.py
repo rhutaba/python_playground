@@ -9,10 +9,7 @@ parser = argparse.ArgumentParser(
     )
 
 # 引数の追加実装
-parser.add_argument(
-    '-v', '--verbose', help='select mode', action='store_true',
-    required=True
-)
+parser.add_argument('-v', '--verbose', help='select mode', action='store_true')
 
 # 引数を解析する
 args = parser.parse_args()
