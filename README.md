@@ -1,2 +1,6 @@
 # python_playground
-python playground
+
+## Environment
+
+- macOS
+- Python 3.8.0
